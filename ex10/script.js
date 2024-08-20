@@ -12,12 +12,11 @@ for(let i = 1; i <= n; i++){
     for(let k = 1; k <= max_star ; k++){
         row += "*";
     }
+    max_star += 2; 
 
     row += "\n"; 
-    max_star += 2; 
     result += row; 
     row = "";
 }
 
 console.log(result); 
-
