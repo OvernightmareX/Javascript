@@ -12,4 +12,4 @@ function isPalindrome(word){
 
 let wordInput = prompt("Insérer un mot : "); 
 
-alert(isPalindrome(wordInput)); 
+alert(isPalindrome(wordInput.trim().toLowerCase())); 
