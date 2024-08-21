@@ -1,4 +1,3 @@
-
 function choice(){
     let display = "Choisir un mode de saisie:\n";
     display += "1 : Saisie fixe\n";
