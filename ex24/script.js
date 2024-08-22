@@ -18,11 +18,54 @@ let etudiants = [
             informatique: 4, 
             sport: 10 
         } 
-    } 
-]; 
+    }, 
+    { 
+        prenom: "Marie", 
+        nom: "Dubois", 
+        matieres: { 
+            francais: 18, 
+            anglais: 13, 
+            maths: 17, 
+            sport: 12 
+        } 
+    },
+    { 
+        prenom: "Luc", 
+        nom: "Martin", 
+        matieres: { 
+            francais: 10, 
+            anglais: 9, 
+            informatique: 15, 
+            sport: 14 
+        } 
+    },
+    { 
+        prenom: "Sophie", 
+        nom: "Lemoine", 
+        matieres: { 
+            francais: 14, 
+            anglais: 14, 
+            humour: 12, 
+            arts: 19 
+        } 
+    },
+    { 
+        prenom: "Paul", 
+        nom: "Durand", 
+        matieres: { 
+            francais: 12, 
+            anglais: 8, 
+            maths: 16, 
+            histoire: 15, 
+            musique: 14 
+        } 
+    }
+];
+
 
 let nbNote; 
 let moyenne; 
+let classement= [];
 
 etudiants.forEach(element => {
     console.log("###########DEBUT etudiant###########");
@@ -31,7 +74,7 @@ etudiants.forEach(element => {
     nbNote = 0; 
     moyenne = 0;
     for(let matiere in element.matieres){
-        console.log(`${matiere} : ${element.matieres[matiere]} / 20`);
+        console.log(`  ${matiere} : ${element.matieres[matiere]} / 20`);
         nbNote++; 
         moyenne += element.matieres[matiere];
     }
@@ -39,4 +82,9 @@ etudiants.forEach(element => {
     console.log(`La moyenne est de ${moyenne.toFixed(2)}`);
     console.log("############FIN etudiant############");
 
+    let place = {nom: (element.prenom + " " + element.nom), moyenne}; 
+    classement.push(place);
+
 });
+classement.sort((a, b) => b.moyenne - a.moyenne);
+console.table(classement);
