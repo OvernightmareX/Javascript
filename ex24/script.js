@@ -67,22 +67,22 @@ let nbNote;
 let moyenne; 
 let classement= [];
 
-etudiants.forEach(element => {
+etudiants.forEach(etudiant => {
     console.log("###########DEBUT etudiant###########");
-    console.log(`Etudiant : ${element.nom} ${element.prenom}`);
+    console.log(`Etudiant : ${etudiant.nom} ${etudiant.prenom}`);
 
     nbNote = 0; 
     moyenne = 0;
-    for(let matiere in element.matieres){
-        console.log(`  ${matiere} : ${element.matieres[matiere]} / 20`);
+    for(let matiere in etudiant.matieres){
+        console.log(`  ${matiere} : ${etudiant.matieres[matiere]} / 20`);
         nbNote++; 
-        moyenne += element.matieres[matiere];
+        moyenne += etudiant.matieres[matiere];
     }
     moyenne = moyenne / nbNote; 
     console.log(`La moyenne est de ${moyenne.toFixed(2)}`);
     console.log("############FIN etudiant############");
 
-    let place = {nom: (element.prenom + " " + element.nom), moyenne}; 
+    let place = {nom: (etudiant.prenom + " " + etudiant.nom), moyenne}; 
     classement.push(place);
 
 });
