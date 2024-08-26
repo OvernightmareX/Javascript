@@ -13,7 +13,7 @@
     <hr>
     <p>Mise en application de la théorie POO en Javascript</p>
     <br>
-    <h3>Liste des contacts</h3>
+    <h3 class="text-center">Liste des contacts</h3>
 
 
     <table class="table table-bordered">
@@ -32,9 +32,57 @@
       </tbody>
     </table>
 
+    <div class="mt-5 p-3 border">
+      <h3 class="text-center">Ajouter contact</h3>
+      <form id="contactForm" action="#" method="post">
+          <div class="mb-3">
+              <label class="form-label">Civilité</label>
+              <div>
+                  <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="civilite" id="mr" value="Mr">
+                      <label class="form-check-label" for="mr">Mr</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="civilite" id="mme" value="Mme">
+                      <label class="form-check-label" for="mme">Mme</label>
+                  </div>
+              </div>
+          </div>
+  
+          <div class="row mb-3">
+              <div class="col-md-6">
+                  <label for="nom" class="form-label">Nom</label>
+                  <input type="text" class="form-control" id="nom" name="nom" placeholder="Nom">
+              </div>
+              <div class="col-md-6">
+                  <label for="prenom" class="form-label">Prénom</label>
+                  <input type="text" class="form-control" id="prenom" name="prenom" placeholder="Prénom">
+              </div>
+          </div>
+  
+          <div class="row mb-3">
+              <div class="col-md-4">
+                  <label for="date" class="form-label">Date</label>
+                  <input type="date" class="form-control" id="date" name="date">
+              </div>
+              <div class="col-md-4">
+                  <label for="telephone" class="form-label">Téléphone</label>
+                  <input type="tel" class="form-control" id="telephone" name="telephone" placeholder="Téléphone">
+              </div>
+              <div class="col-md-4">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+              </div>
+          </div>
+  
+          <div class="d-grid">
+              <button type="submit" class="btn btn-primary">Ajouter</button>
+          </div>
+      </form>
+    </div>
 
   </main>
 
-  <script type="module" src="./script.js"></script>
+  <script type="module" src="./js/script.js"></script>
 </body>
 </html>

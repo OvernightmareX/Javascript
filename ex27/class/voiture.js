@@ -10,7 +10,7 @@ export class Voiture {
         let result = ""; 
         for(let i = 0; i < nb; i++){
             this.speed += 10;
-            result += this.toString(); 
+            result += `<p>La voiture <b>${this.brand} ${this.model}</b> avance désormais à <b>${this.speed}km/h</b></p>`; 
         }
         return result; 
     }
@@ -19,13 +19,13 @@ export class Voiture {
         let result = ""; 
         for(let i = 0; i < nb; i++){
             this.speed -= 5;
-            result += this.toString(); 
+            result += `<p>La voiture <b>${this.brand} ${this.model}</b> avance désormais à <b>${this.speed}km/h</b></p>`; 
         }
         return result; 
     }
 
     toString(){
-        return `<p>La voiture <b>${this.brand} ${this.model}</b> avance désormais à <b>${this.speed}km/h</b></p>`;
+        return `La voiture ${this.brand} ${this.model} avance désormais à ${this.speed}km/h`;
     }
 }
 
