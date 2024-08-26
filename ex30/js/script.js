@@ -33,8 +33,22 @@ function filterGradesResult(averageOutput, isStudent, isField){
     return filteredGrades;
 }
 
-function displayResults(filteredGrades, data, averageOutput){
+function displayResults(filteredGrades, data, averageOutput, isStudent, isField){
     let gradeSum=0;
+
+    averageOutput.innerHTML = "La moyenne générale "; 
+
+    if(isStudent && isField){
+        averageOutput.innerHTML += `en <b>${allLesson[displayFieldSelect.value-1]}</b> de <b>${allStudent[displayStudentSelect.value-1]}</b> : `;
+    } else{
+        if(isStudent){
+            averageOutput.innerHTML += `de <b>${allStudent[displayStudentSelect.value-1]}</b> : `;
+        }
+        else{
+            averageOutput.innerHTML += `en <b>${allLesson[displayFieldSelect.value-1]}</b> : `;
+        }
+    }
+
     data.innerHTML += "<tr>";
     filteredGrades.forEach((element) => {
         gradeSum += element.grade;
@@ -132,10 +146,8 @@ function updateGradeDisplay(){
     if(!isStudent && !isField)
         return; 
     
-    averageOutput.innerHTML = "La moyenne générale "; 
-
     filteredGrades = filterGradesResult(averageOutput, isStudent, isField); 
-    displayResults(filteredGrades, data, averageOutput);
+    displayResults(filteredGrades, data, averageOutput, isStudent, isField);
 }
 
 let allStudent = []; 

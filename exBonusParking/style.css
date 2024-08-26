@@ -1,0 +1,21 @@
+.hidden {
+    display: none;
+}
+
+.red {
+    background-color: lightpink;
+    border-color: pink;
+    color: brown;
+}
+
+.green {
+    background-color: lightgreen;
+    border-color: greenyellow;
+    color: green;
+}
+
+.orange {
+    background-color: lightyellow;
+    border-color: yellow;
+    color: darkgoldenrod;
+}
