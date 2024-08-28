@@ -1,0 +1,9 @@
+.hidden {
+    display: none;
+}
+
+.red {
+    background-color: lightpink;
+    border-color: pink;
+    color: brown;
+}
